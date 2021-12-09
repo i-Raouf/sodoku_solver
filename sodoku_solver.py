@@ -14,7 +14,13 @@ puzzle = [
 ]
 
 def find_next_empty(puzzle):
-    pass
+    # return row, col or None, None (if no empty cell)
+    for r in range(9):
+        for c in range(9):
+            if puzzle[r][c] == 0:
+                return r, c
+    
+    return None, None
 
 def is_valid(puzzle, guess, row, col):
     pass
