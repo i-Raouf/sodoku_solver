@@ -28,6 +28,11 @@ def is_valid(puzzle, guess, row, col):
     if guess in row_vals:
         return False
 
+    # column
+    col_vals = [puzzle[i][col] for i in range(9)]
+    if guess in col_vals:
+        return False
+
 def solve_sodoku(puzzle):
     # choose a cell
     row, col = find_next_empty(puzzle)
