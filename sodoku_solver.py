@@ -33,6 +33,16 @@ def is_valid(puzzle, guess, row, col):
     if guess in col_vals:
         return False
 
+    # square
+    row_start = (row // 3) * 3
+    col_start = (col // 3) * 3
+    for r in range(row_start,row_start +3):
+        for c in range(col_start, col_start + 3):
+            if puzzle[r][c] == guess:
+                return False
+
+    return True
+
 def solve_sodoku(puzzle):
     # choose a cell
     row, col = find_next_empty(puzzle)
