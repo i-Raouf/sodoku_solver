@@ -65,3 +65,8 @@ def solve_sodoku(puzzle):
 
     # no solution found
     return False
+
+if __name__ == "__main__":
+    print(solve_sodoku(puzzle))
+    for r in range(9):
+        print(" ".join([str(i) for i in puzzle[r]]))
