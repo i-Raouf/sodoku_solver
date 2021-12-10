@@ -23,7 +23,10 @@ def find_next_empty(puzzle):
     return None, None
 
 def is_valid(puzzle, guess, row, col):
-    pass
+    # row
+    row_vals = puzzle[row]
+    if guess in row_vals:
+        return False
 
 def solve_sodoku(puzzle):
     # choose a cell
